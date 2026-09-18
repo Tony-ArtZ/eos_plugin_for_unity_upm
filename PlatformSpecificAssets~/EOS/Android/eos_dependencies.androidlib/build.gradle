@@ -7,7 +7,6 @@ repositories {
 apply plugin: 'com.android.library'
 
 android {
-    // Mandatory for modern Android builds (AGP 8.0+)
     namespace 'com.playeveryware.eos'
 
     sourceSets {
@@ -20,13 +19,14 @@ android {
         }
     }
 
-    // Updated syntax for AGP 8.0+ compatibility
-    compileSdk **APIVERSION**
-    buildToolsVersion '**BUILDTOOLS**'
+    // Hardcoded to stable API 35 to completely avoid the API 37 corruption bug
+    compileSdk 35
+    
+    // Removed buildToolsVersion entirely to satisfy AGP 9.0.0
     
     defaultConfig {
-        // Updated syntax for AGP 8.0+ compatibility
-        targetSdk **TARGETSDKVERSION**
+        // Hardcoded target SDK
+        targetSdk 35
     }
 }
 
