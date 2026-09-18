@@ -7,7 +7,7 @@ repositories {
 apply plugin: 'com.android.library'
 
 android {
-    namespace 'com.playeveryware.eos'
+    namespace 'com.pew.eos_dependencies'
 
     sourceSets {
         main {
